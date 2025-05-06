@@ -1,20 +1,20 @@
-NAME=brainz
+NAME=brainzz
 FLAG=-std=c++98 -Wall -Wextra -Werror
-SRC=main.cpp newZombie.cpp Zombie.cpp randomChump.cpp
+SRC=main.cpp Zombie.cpp zombieHorde.cpp 
 OBJ=$(SRC:.cpp=.o)
 
 all : $(NAME)
 
 %.o : %.cpp
-	c++ $(CFLAG) $< -c -o $@
+	c++ $(FLAG) $< -c -o $@
 
 $(NAME) : $(OBJ)
-	c++ $(CFLAG) $^ -o $@
+	c++ $(FLAG) $^ -o $@
 
 clean:
-	rm -rf $(OBJ)
+		rm -rf $(OBJ)
 fclean:clean
-	rm -rf $(NAME)
+		rm -rf $(NAME)
 
 re :fclean all
 .PHONY: clean fclean re all
