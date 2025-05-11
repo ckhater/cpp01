@@ -1,12 +1,11 @@
 #include"Zombie.hpp"
 
 Zombie::Zombie(std::string zombiename):name(zombiename){
-    // std::cout<<"the "<<name<<" created successfully"<<std::endl;
-    // std::cout<<"*******************"<<std::endl<<std::endl;
+    std::cout<<"the "<<name<<" created successfully"<<std::endl;
 }
 
 Zombie::~Zombie(){
-    std::cout<<std::endl<<"The "<<name<<" is destructed"<<std::endl;
+    std::cout<<"The "<<name<<" is destructed"<<std::endl;
 }
 
 void    Zombie::announce(void){
